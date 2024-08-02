@@ -1,0 +1,19 @@
+spring:
+  h2:
+    console.enabled: false
+  datasource:
+    url: jdbc:h2:mem:dcbapp
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  news-config:
+    news-parser-target: bbc # [bbc | reuters] target website for parsing
+    news-for-last-days: 1 # store and maintain news in DB for X days
+
+  application:
+    name: server
